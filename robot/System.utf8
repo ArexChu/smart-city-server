@@ -1,0 +1,13 @@
+master 郑骁庆
+robot 小华
+city 上海
+location 复旦大学张江校区
+website 百度
+hasChatbot true
+hasDefinedQuestion true
+hasInstruction true
+chatbot http://116.62.236.184/
+knowledgebaseFile knowledgebase/knowledgebase.owl
+knowledgebaseID 1495373640
+matchThreshold 0.85
+questionThreshold 0.80

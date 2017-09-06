@@ -1,0 +1,1217 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns="http://www.owl-ontologies.com/Ontology1495373640.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://www.owl-ontologies.com/Ontology1495373640.owl">
+  <owl:Ontology rdf:about=""/>
+  <owl:Class rdf:ID="故事">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >故事</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="文学作品"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="人物">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >人物</rdfs:label>
+  </owl:Class>
+  <owl:Class>
+    <owl:unionOf rdf:parseType="Collection">
+      <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+      <owl:Class rdf:about="#人物"/>
+      <owl:Class rdf:ID="作品"/>
+      <owl:Class rdf:ID="菜谱"/>
+    </owl:unionOf>
+  </owl:Class>
+  <owl:Class>
+    <owl:unionOf rdf:parseType="Collection">
+      <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+      <owl:Class rdf:about="#人物"/>
+      <owl:Class rdf:about="#作品"/>
+    </owl:unionOf>
+  </owl:Class>
+  <owl:Class rdf:ID="电影">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="艺术作品"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >电影</rdfs:label>
+  </owl:Class>
+  <owl:Class>
+    <owl:unionOf rdf:parseType="Collection">
+      <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+      <owl:Class rdf:about="#人物"/>
+    </owl:unionOf>
+  </owl:Class>
+  <owl:Class rdf:ID="歌手">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >歌手</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#人物"/>
+  </owl:Class>
+  <owl:Class rdf:ID="诗">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#文学作品"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >诗</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="词">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >词</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#文学作品"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#文学作品">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#作品"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >文学作品</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="歌曲">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#艺术作品"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >歌曲</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#作品">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >作品</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="导演">
+    <rdfs:subClassOf rdf:resource="#人物"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >导演</rdfs:label>
+  </owl:Class>
+  <owl:Class>
+    <owl:unionOf rdf:parseType="Collection">
+      <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+      <owl:Class rdf:about="#作品"/>
+      <owl:Class rdf:about="#菜谱"/>
+    </owl:unionOf>
+  </owl:Class>
+  <owl:Class rdf:ID="作家">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >作家</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#人物"/>
+  </owl:Class>
+  <owl:Class rdf:ID="概念">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >概念</rdfs:label>
+  </owl:Class>
+  <owl:Class>
+    <owl:unionOf rdf:parseType="Collection">
+      <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+      <owl:Class rdf:about="#人物"/>
+    </owl:unionOf>
+  </owl:Class>
+  <owl:Class rdf:about="#菜谱">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >菜谱</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#艺术作品">
+    <rdfs:subClassOf rdf:resource="#作品"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >艺术作品</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="演员">
+    <rdfs:subClassOf rdf:resource="#人物"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >演员</rdfs:label>
+  </owl:Class>
+  <owl:Class>
+    <owl:unionOf rdf:parseType="Collection">
+      <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+      <owl:Class rdf:about="#作品"/>
+    </owl:unionOf>
+  </owl:Class>
+  <owl:ObjectProperty rdf:ID="作者">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+          <owl:Class rdf:about="#文学作品"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >作者</rdfs:label>
+    <rdfs:range rdf:resource="#人物"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="指导">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >指导</rdfs:label>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+          <owl:Class rdf:about="#电影"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="#导演"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="演唱">
+    <rdfs:range rdf:resource="#歌手"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+          <owl:Class rdf:about="#歌曲"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >演唱</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="主演">
+    <rdfs:range rdf:resource="#人物"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+          <owl:Class rdf:about="#电影"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >主演</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="别名">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >别名</rdfs:label>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+          <owl:Class rdf:about="#人物"/>
+          <owl:Class rdf:about="#菜谱"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:FunctionalProperty rdf:ID="歌词">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >歌词</rdfs:label>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+          <owl:Class rdf:about="#歌曲"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="简介">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >简介</rdfs:label>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+          <owl:Class rdf:about="#人物"/>
+          <owl:Class rdf:about="#作品"/>
+          <owl:Class rdf:about="#菜谱"/>
+          <owl:Class rdf:about="#概念"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="原文">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+          <owl:Class rdf:about="#文学作品"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >原文</rdfs:label>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="名称">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+          <owl:Class rdf:about="#作品"/>
+          <owl:Class rdf:about="#菜谱"/>
+          <owl:Class rdf:about="#概念"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >名称</rdfs:label>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="步骤">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+          <owl:Class rdf:about="#菜谱"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >步骤</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="性别">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >性别</rdfs:label>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+          <owl:Class rdf:about="#人物"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="主料">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >主料</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+          <owl:Class rdf:about="#菜谱"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="剧情">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+          <owl:Class rdf:about="#电影"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >剧情</rdfs:label>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="姓名">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >姓名</rdfs:label>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+          <owl:Class rdf:about="#人物"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="辅料">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+          <owl:Class rdf:about="#菜谱"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >辅料</rdfs:label>
+  </owl:FunctionalProperty>
+  <故事 rdf:about="Knowledgebase_Class27">
+    <名称 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >灰姑娘</名称>
+    <简介 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >《灰姑娘》是经典童话的故事，灰姑娘母亲、父亲相继去世，继母和其女儿们对她百般折磨，但灰姑娘得到魔法相助，成为王子的意中人的故事。</简介>
+    <原文 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >母亲的早逝令灰姑娘辛德瑞拉再也感受不到母爱的温暖，失去了公主般的童年。后母和她的两个女儿，无时无刻不在想方设法折磨仙德瑞拉，给她糟糕的住处、做不完的家务。幸好得道多助、失道寡助，心地善良的辛德瑞拉结识了一大班朋友，老鼠、鸟儿、小狗都是守护在她周围的老友记。王子要在全城寻找王妃，仙德瑞拉用破旧零碎的布料赶做了一件礼服，当然这远远比不上心花怒放的姐姐们穿得艳丽。然而，灰姑娘得到了魔法相助，在神奇的法术中她美得倾城，坐着南瓜车来到王子的宫殿，与王子翩翩起舞。她知道，法术会在12点之前统统消失，大钟敲响的那一刻，她慌忙逃离王子，情陷已深的王子拿着灰姑娘不小心遗下的玻璃鞋，誓要从百万女子中找到一生中的最爱辛德瑞拉。在母亲离世后，艾拉的父亲再娶了一位继母。为了支持深爱的父亲，艾拉热情欢迎继母和她的两位女儿进入自己的家庭。然而当父亲也意外去世后，她才发现自己身陷嫉妒和折磨。艾拉被继母一家当作女仆对待，还被恶意称作“灰姑娘”。尽管遭受残忍的折磨，艾拉还是决心坚持母亲的遗言，“勇敢而善良地活下去”，因此她不向绝望投降，也不仇恨虐待她的人。后来，艾拉在树林里遇见了潇洒迷人的陌生人基特，她以为他是王宫的随从，却不知他竟是王子。随着王宫向全国少女发出舞会邀请，艾拉也希望自己能借机再见基特。但是当然，继母不允许她参加舞会，还撕碎了她的裙子。可就如所有美好童话故事里描绘的一样。神仙教母翩然而至，借用一只南瓜和一群小老鼠，永远改变了灰姑娘的人生。</原文>
+  </故事>
+  <词 rdf:about="Knowledgebase_Class11">
+    <名称 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >念奴娇·赤壁怀古</名称>
+    <原文 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >大江东去，浪淘尽，千古风流人物。故垒西边，人道是：三国周郎赤壁。乱石穿空，惊涛拍岸，卷起千堆雪。江山如画，一时多少豪杰。
+遥想公瑾当年，小乔初嫁了，雄姿英发。羽扇纶巾，谈笑间樯橹灰飞烟灭。故国神游，多情应笑我，早生华发。人生如梦，一尊还酹江月。</原文>
+    <简介 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >《念奴娇·赤壁怀古》是宋代文学家苏轼的词作，是豪放词的代表作之一。此词通过对月夜江上壮美景色的描绘，借对古代战场的凭吊和对风流人物才略、气度、功业的追念，曲折地表达了作者怀才不遇、功业未就、老大未成的忧愤之情，同时表现了作者关注历史和人生的旷达之心。全词借古抒怀，雄浑苍凉，大气磅礴，笔力遒劲，境界宏阔，将写景、咏史、抒情融为一体，给人以撼魂荡魄的艺术力量，曾被誉为“古今绝唱”。</简介>
+    <作者>
+      <作家 rdf:about="Knowledgebase_Class9">
+        <简介 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >苏轼（1037年1月8日—1101年8月24日），字子瞻，又字和仲，号铁冠道人、东坡居士，世称苏东坡、苏仙 。汉族，眉州眉山（今属四川省眉山市）人，祖籍河北栾城，北宋著名文学家、书法家、画家。</简介>
+        <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >苏东坡</别名>
+        <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >苏仙</别名>
+        <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >苏文忠</别名>
+        <性别 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >男</性别>
+        <姓名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >苏轼</姓名>
+      </作家>
+    </作者>
+  </词>
+  <歌曲 rdf:about="Knowledgebase_Class0">
+    <名称 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >东风破</名称>
+    <演唱>
+      <歌手 rdf:about="Knowledgebase_Class32">
+        <性别 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >男</性别>
+        <简介 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >1979年1月18日出生于台湾省新北市，中国台湾流行乐男歌手、音乐人、演员、导演、编剧、监制、商人。</简介>
+        <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >周董</别名>
+        <姓名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >周杰伦</姓名>
+      </歌手>
+    </演唱>
+    <歌词 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >一盏离愁孤灯伫立在窗口
+我在门后假装你人还没走
+旧地如重游月圆更寂寞
+夜半清醒的烛火不忍苛责我
+一壶漂泊浪迹天涯难入喉
+你走之后酒暖回忆思念瘦
+水向东流时间怎么偷
+花开就一次成熟我却错过
+谁在用琵琶弹奏一曲东风破
+岁月在墙上剥落看见小时候
+犹记得那年我们都还很年幼
+而如今琴声幽幽我的等候你没听过
+谁在用琵琶弹奏一曲东风破
+枫叶将故事染色结局我看透
+篱笆外的古道我牵着你走过
+荒烟漫草的年头就连分手都很沉默
+一壶漂泊浪迹天涯难入喉
+你走之后酒暖回忆思念瘦
+水向东流时间怎么偷
+花开就一次成熟我却错过
+谁在用琵琶弹奏一曲东风破
+岁月在墙上剥落看见小时候
+犹记得那年我们都还很年幼
+而如今琴声幽幽我的等候你没听过
+谁在用琵琶弹奏一曲东风破
+枫叶将故事染色结局我看透
+篱笆外的古道我牵着你走过
+荒烟漫草的年头就连分手都
+谁在用琵琶弹奏一曲东风破
+岁月在墙上剥落看见小时候
+犹记得那年我们都还很年幼
+而如今琴声幽幽我的等候你没听过
+谁在用琵琶弹奏一曲东风破
+枫叶将故事染色结局我看透
+篱笆外的古道我牵着你走过
+荒烟漫草的年头就连分手都很沉默</歌词>
+  </歌曲>
+  <故事 rdf:about="Knowledgebase_Class28">
+    <简介 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >白雪公主是广泛流行于欧洲的一个童话故事中的人物，其中最著名的故事版本见于德国1812年的《格林童话》。讲述了白雪公主受到继母皇后（格林兄弟最初手稿中为生母）的虐待，逃到森林里，遇到七个小矮人的故事。历史学家巴特尔思据称白雪公主的历史原型是1725年生于德国西部美茵河畔洛尔城的玛利亚·索菲亚·冯·埃尔塔尔。</简介>
+    <原文 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >在故事开始时，王后坐在在一个敞开的窗户边，冬雪像针一样刺破了她的手指，导致三滴鲜血滴落在雪地和乌木窗框上。她欣赏着三种颜色的混合变化，对自己说:“哦，我多么希望我有一个女儿，皮肤像雪一样白，嘴唇像血一样红，头发黑得像乌木窗框”。不久之后，女王的确生一个女儿像皮肤雪一样白，嘴唇像血一样红，头发黑得像乌木一样。他们便给她取名叫白雪公主，不久之后，女王去世。
+经过一年之后，国王娶了一个新妻子，这个妻子非常的美丽，但是她目空一切，非常骄傲。这个新王后拥有一个神奇的魔镜，每天早上她问:“魔镜在我手，谁是这块土地上最美丽的人?”。镜子总是回答说:“我的女王，你是最美丽的在那块土地上。“女王总是感到很高兴，因为魔镜从来没有撒谎。但是，当白雪公主长到七岁，她变得美如天使甚至比女王更美丽。当王后问她的镜子，它回答:“我的女王，你是这里最美丽。但白雪公主比你更美丽一千倍。”
+女王很震惊，她的脸因为生气变得又绿又黄，内心充满嫉妒，从那一刻她的心开始反感白雪公主。嫉妒和骄傲，像杂一般在她的内心生长，让她彻夜难眠。女王命令一个猎人把白雪公主带到森林的最深处杀掉。她要求猎人带回白雪公主的心肝，以证明白雪公主死了。猎人将白雪公主到森林里，但当他提高自己的刀后，他发现自己无法下狠心杀死她。白雪公主看见了猎人的举动抽泣得祈求猎人:“哦，亲爱的猎人，请不要杀我!让我自己了解我自己的生命，我将跑进森林，再也不会回来!”。猎人认为他离开白雪公主后，女孩一定会被野生动物吃掉。他就向一个厨师要了野猪的心肝交给了女王。
+蜿蜒穿过森林后数日，白雪公主发现一个属于小矮人的小别墅。因为没有人在家，她吃一些饭，喝了点酒，然后拼起了所有的床。最后拼起的床足够让她舒适躺下，，她就在床上睡着了。当小矮人回家时，他们立即就能知道有人偷偷潜入的，因为家里的一切都是一团糟。在他们大声讨论谁偷偷潜入了自己的家，最后发现熟睡的白雪公主。这时女孩醒来了，对他们解释发生了什么事，小矮人怜悯她，说:“如果你保持房子的整洁，做饭，铺床叠被，洗衣服，缝纫，和编织，并使一切干净有序，你就可以和我们住在一起，你会有你想要的一切。但他们警告她独自在家时要小心，不要一个人到山里乱跑，也不要相信陌生人。
+与此同时，皇后再次问她的镜子:“魔镜在我手，谁是这块土地上最美丽的?“镜子回答说:“我的女王，你是这里最美丽的。远在七个小矮人家的但白雪公主比你美丽几千倍。”女王惊恐地得知猎人已经背叛了她，白雪还活着。她思考着如何骗过白雪公主，然后，她把自己乔装成一个老小贩。女王走到小矮人的别墅，声称自己能提供色彩鲜艳，柔滑的鞋带，并说服白雪公主选取了最好的一根鞋带作为礼物。然后女王把这根施展了魔法鞋带紧紧绑在了白雪公主的脚上，白雪公主晕倒了过去。但小矮人回来时发现了这一情况，松开了魔法鞋带，让白雪公主重新醒了过来。
+第二天早上女王询问她的镜子，镜子再次说明了白雪公主依然活着的消息。王后被激怒了，她打扮成一个卖梳子的商人，声称为白雪公主带一个漂亮梳子作为礼物。在她刷白雪公主的头发时，那一个有毒的魔法梳子让女孩晕倒了，但是小矮人们回来拔掉了梳子让白雪公主再一次醒来。和第二天早上镜子告诉王后，白雪公主仍然是“比他更加美丽的女人。听到这个消息女王的震惊和愤怒几乎让她的心脏停止跳动。作为第三次和也是最后的尝试，她偷偷查阅了最黑暗的魔法，使用一个带毒的苹果并且伪装一个农场主的妻子，带着这个苹果她找到了白雪公主。这次女孩因为之前几次的情况，首先是不愿接受的，所以女王削减一半的苹果，自己吃掉了白色(无害的)部分苹果，并且把给红色(毒)部分给白雪公主。白雪公主刚刚咬了一口就昏倒在地，再也无法醒过来，女王终于赢得了胜利。当小矮人们回到了别墅，发现自己无法救活这个女孩，因为他们无法找到白雪公主昏厥的原因，只能认为她已经死了，小矮人们无法承受失去白雪公主的伤痛，便把她安置在一个水晶棺材中，每天能够看到她。
+时间很快过去了，一天一个骑着白马的王子经过了这里，发现了躺在棺材里睡着的白雪公主。他大步跨到她的棺材面前，被她的美丽深深吸引，立刻爱上了她。七个小矮人感动于他的苦苦恳求便同意让他带走装有白雪公主的水晶棺材，王子的仆人们抬棺木离开时，由于动作幅度很大，对引起了强烈的震动。此次震动使那块毒苹果从白雪公主的喉咙抖了出来，最后唤醒了她。王子随后声明他对她的爱，他们很快拟定了一个婚礼计划。这对夫妇邀请了大陆上每一个王后和国王来婚礼，包括白雪公主的继母。与此同时，女王，仍然相信白雪公主不是活着，再问她神奇的镜子，谁是这块土地上最美丽的女人。镜子说:“你，我的女王，是很美丽的。但白马王子那位年轻的女王是比你美丽一千倍。”
+这难以置信的消息让女王惊骇万分，女王心中充满了恐惧和怀疑。对于邀请犹豫不决，但她最终决定去。因为不知道这个新皇后确实是她的继女，她到达了婚礼，心里充满了最深的恐惧。当她意识到最后的真相时，已经无法逃走了。作为对她试图谋杀的惩罚，王子把一双鞋子烧红的铁鞋子让女王穿上。她随后被迫进入铁鞋在火上跳舞，跳舞直到她最后死去。</原文>
+    <名称 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >白雪公主</名称>
+  </故事>
+  <诗 rdf:about="Knowledgebase_Class8">
+    <名称 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >春望</名称>
+    <作者>
+      <作家 rdf:about="Knowledgebase_Class7">
+        <性别 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >男</性别>
+        <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >杜少陵</别名>
+        <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >杜工部</别名>
+        <简介 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >杜甫（公元712年－公元770年），字子美，汉族，本襄阳人，后徙河南巩县。自号少陵野老，唐代伟大的现实主义诗人，与李白合称“李杜”。为了与另两位诗人李商隐与杜牧即“小李杜”区别，杜甫与李白又合称“大李杜”，杜甫也常被称为“老杜”。</简介>
+        <姓名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >杜甫</姓名>
+      </作家>
+    </作者>
+    <原文 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >国破山河在，城春草木深。
+感时花溅泪，恨别鸟惊心。
+烽火连三月，家书抵万金。
+白头搔更短，浑欲不胜簪。</原文>
+    <简介 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >《春望》是唐朝诗人杜甫的一首五言律诗。这首诗的前四句写春日长安凄惨破败的景象，饱含着兴衰感慨；后四句写诗人挂念亲人、心系国事的情怀，充溢着凄苦哀思。这首诗格律严整，颔联分别以“感时花溅泪”应首联国破之叹，以“恨别鸟惊心’’应颈联思家之忧，尾联则强调忧思之深导致发白而稀疏，对仗精巧，声情悲壮，表现了诗人爱国之情。</简介>
+  </诗>
+  <故事 rdf:about="Knowledgebase_Class26">
+    <原文 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >在一个遥远的山村里，住着一位猪妈妈和她的三只可爱的小猪。妈妈每天很辛苦，小猪们一天天长大了，可还是什么事都不做。
+一天晚上，吃过晚饭，猪妈妈把孩子们叫到面前郑重其事地说：“你们已经长大了，应该独立生活了，等你们盖好自己的房后就搬出去住吧。”
+三只小猪谁也不想搬出去住，更不想自己动手盖房子，又不能不听妈妈的话。于是，他们开始琢磨什么样的房子。老大先动手了。
+他首先扛来许多稻草，选择了一片空地，在中间搭了一座简易的稻草屋，然后用草绳捆了捆。“哈哈！我有自己的房子了！”老大乐得欢蹦乱跳。
+第二天老大搬进了自己的新家，老二和老三好奇地前来参观。老二说：“老三，你看大哥的房子，也太简陋了，我要盖一座又漂亮、又舒适的房子！”
+老二跑到山上砍下许多木头回来，锯成木板、木条，叮叮当当地敲个不停。不久，老二也盖好了自己的木房子。显然这比老大的要漂亮、结实得多。
+老二很快搬到自己的新家住了，老大和老三也过来参观。老大赞不绝口，深感自己的房子过于简陋；老三看后说：“我盖的房子还会更好的。”
+老三回到家左思右想，终于决定建造一栋用砖石砌成的房子，因为这种房子非常坚固，不怕风吹雨打，可这需要付出许多努力啊！
+老三每天起早贪黑，一趟一趟地搬回一块一块的石头，堆在一旁，再一块一块地砌成一面面墙。哥哥们在一旁取笑道：“只有傻瓜才会这么做！”
+小弟毫不理会，仍夜以继日地工作。哥哥们休息了，他还在不停地干。这样整整过了三个月，老三的新房子也盖好了！他好高兴啊！
+有一天来了一只大野狼。老大惊慌地躲进了他的稻草屋。野狼"嘿嘿"地冷笑了两声，狠狠吹了口气就把稻草屋吹倒了。老大只好撒腿就跑。
+老大径直跑到二弟家，边跑边喊：“二弟！快开门！救命啊！”二弟打开门一看，一只大野狼追了过来，赶紧让大哥进了屋，关好门。
+大野狼追到门前停了下来，心想：“你们以为木头房子就能难住我吗？”他一下一下地向大门撞去。“哗啦”一声，木头房子被撞倒了。
+兄弟俩又拼命逃到老三家，气喘吁吁地告诉老三所发生的一切。老三先关紧了门窗，然后胸有成竹地说：“别怕！没问题了！”
+大野狼站在大门前，他知道房子里有三只小猪，可不知怎么才能进去。他只能重施旧技，对着房门呼呼吹气，结果无济于事。
+野狼有点儿急了，他又用力去撞。“当”的一声，野狼只觉得两眼直冒金星，再看房子，纹丝不动。野狼真的急了，转身去找了一把锤子。
+野狼憋足劲，挥起大铁锤敲了下去，没想到锤子把儿断了，锤子反弹回来，正砸在野狼的头上。“疼死我了！”野狼大叫。他真的无技可施了。
+野狼只好满脸堆笑地请三只小猪一起去郊游。三只小猪很聪明，也很团结。他们提前到郊外摘了许多苹果。不久，野狼来了。
+三只小猪按计划迅速爬到苹果树上。野狼迷惑不解地问：“你们到树上去干什么？”老三回答说：“我们在吃苹果呢！你要不要来一个？”
+野狼馋得直流口水，便满口答应了。老三摘了一个大苹果丢下去，苹果顺着山坡滚下好远，野狼在后面追，结果越跑越远。三只小猪趁机跑回了家。
+野狼气急败坏地返回来，他绕着房子转了一圈，最后爬上房顶，他想从烟囱溜进去。老三从窗口发现后，马上点起了火。
+野狼掉进火炉里，熏得够呛，整条尾巴都烧焦了。他嚎叫着夹着尾巴逃走了，再也不敢来找三只小猪的麻烦了。</原文>
+    <名称 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >三只小猪</名称>
+    <简介 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >三只小猪，是著名的英国童话。以会说话的动物为主角，出版时间可能是18世纪或更早，由于1933年5月27日迪士尼所制作的三只小猪长篇动画，目前三只小猪已是全球儿童所熟知的童话之一。</简介>
+  </故事>
+  <歌曲 rdf:about="Knowledgebase_Class1">
+    <歌词 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >明月几时有 把酒问青天
+不知天上宫阙 今夕是何年
+我欲乘风归去 唯恐琼楼玉宇
+高处不胜寒
+起舞弄清影 何似在人间
+转寒朱阁 低绮户 照无眠
+不应有恨 何事长向别时圆
+人有悲欢离合 月有阴晴圆缺
+此事古难全
+但愿人长久 千里共婵娟
+我欲乘风归去 唯恐琼楼玉宇
+高处不胜寒
+起舞弄清影 何似在人间
+转寒朱阁 低绮户 照无眠
+不应有恨
+何事长向别时圆别时圆
+人有悲欢离合 月有阴晴圆缺
+此事古难全
+但愿人长久 千里共婵娟</歌词>
+    <演唱>
+      <歌手 rdf:about="Knowledgebase_Class31">
+        <简介 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >1969年8月8日出生于北京，中国流行乐女歌手、影视演员。</简介>
+        <姓名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >王菲</姓名>
+        <性别 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >女</性别>
+        <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >王靖雯</别名>
+      </歌手>
+    </演唱>
+    <名称 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >但愿人长久</名称>
+  </歌曲>
+  <概念 rdf:about="Knowledgebase_Class39">
+    <名称 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >光合作用</名称>
+    <简介 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >光合作用即光能合成作用，是指含有叶绿体的绿色植物和某些细菌，在可见光的照射下，经过光反应和碳反应（旧称暗反应），利用光合色素，将二氧化碳（或硫化氢）和水转化为有机物，并释放出氧气（或氢气）的生化过程。同时也有将光能转变为有机物中化学能的能量转化过程。</简介>
+  </概念>
+  <导演 rdf:about="Knowledgebase_Class10043">
+    <性别 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >男</性别>
+    <姓名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >弗兰克·达拉邦特</姓名>
+    <简介 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >弗兰克·达拉邦特，1959年1月28日生于法国杜省蒙贝利亚尔，导演。比起导演这个工作，弗兰克·达拉邦特更适合被称为编剧，然而他为数极少的导演作品却为他赢得了全世界影迷的爱戴：比如《肖申克的救赎》和《绿色奇迹》。而2001年，他的奥斯卡野心之作《忘了我是谁》让金·凯瑞在正剧上演足了瘾，却票房、口碑双双失利。2007年的作品是根据斯蒂芬·金小说改编的《迷雾》。</简介>
+  </导演>
+  <词 rdf:about="Knowledgebase_Class13">
+    <简介 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >《破阵子·为陈同甫赋壮词以寄》是宋代词人辛弃疾的作品。此词通过对作者早年抗金部队豪壮的阵容和气概以及自己沙场生涯的追忆，表达了作者杀敌报国、收复失地的理想，抒发了壮志难酬、英雄迟暮的悲愤心情；通过创造雄奇的意境，生动地描绘出一位披肝沥胆、忠一不二、勇往直前的将军形象。全词在结构上打破成规，前九句为一意，末一句另为一意，以末一句否定前九句，前九句写得酣恣淋漓，正为加重末五字失望之情，这种艺术手法体现了辛词的豪放风格和独创精神。</简介>
+    <原文 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >醉里挑灯看剑，梦回吹角连营。八百里分麾下炙，五十弦翻塞外声。沙场秋点兵。
+马作的卢飞快，弓如霹雳弦惊。了却君王天下事，赢得生前身后名。可怜白发生！</原文>
+    <作者>
+      <作家 rdf:about="Knowledgebase_Class12">
+        <姓名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >辛弃疾</姓名>
+        <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >稼轩居士</别名>
+        <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >辛忠敏</别名>
+        <简介 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >辛弃疾（1140年5月28日－1207年10月3日），字幼安，号稼轩，山东东路济南府历城县（今济南市历城区遥墙镇四凤闸村）人。南宋豪放派词人、将领，有“词中之龙”之称。与苏轼合称“苏辛”，与李清照并称“济南二安”。</简介>
+        <性别 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >男</性别>
+      </作家>
+    </作者>
+    <名称 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >破阵子·为陈同甫赋壮词以寄</名称>
+  </词>
+  <菜谱 rdf:about="Knowledgebase_Class23">
+    <辅料 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >香葱、生姜、大蒜、淀粉、食用油、酱油、香醋、精盐、白糖、味精</辅料>
+    <名称 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >糖醋排骨</名称>
+    <主料 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >肋排</主料>
+    <简介 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >糖醋排骨是糖醋味型中具有代表性的一道大众喜爱的特色传统名菜，它选用新鲜猪子排作料，肉质鲜嫩，成莱色泽红亮油润。</简介>
+    <步骤 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >小排焯水后，煮三十分钟，肉汤可以煮面条，别倒掉了；用一汤匙料酒，一汤匙生抽，半汤匙老抽，二汤匙香醋（不是白醋）腌渍20分钟；捞出洗净控水备用，炸制金黄，油别放多，可以省油，只要翻身的勤就好了；锅内放排骨，腌排骨的水，三汤勺白糖（大胆的放糖吧，三汤匙，别怕多）。半碗肉汤大火烧开，调入半茶匙盐提味；小火焖十分钟大火收汁，收汁的时候最后加一汤匙香醋，那个酸甜口就出来了；临出锅撒葱花芝麻，少许味精。</步骤>
+  </菜谱>
+  <故事 rdf:about="Knowledgebase_Class29">
+    <简介 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >小红帽是经典的寓言故事。在一个乡下，有个小女孩时常带着她奶奶在生日时送她的一顶小红帽，这顶小红帽戴在她头上再合适不过了，于是大家都喊她“小红帽”。有一天，妈妈让她把糕饼等一些食物送给住在另一个村庄的生病的奶奶。小红帽于是从家里出发了。去奶奶家的路需要穿过森林。森林里有一只大灰狼，想把小红帽给吃了，却又不敢在光天化日下这么做。他便先上前和小红帽搭话，并得知了小红帽将要去的地方。大灰狼于是想出一个计谋，提议小红帽顺道摘些花朵。小红帽听信大灰狼的话，在树林里赶蝴蝶编花束。大灰狼这时先赶到了小红帽奶奶家并把奶奶给吞了。狡猾的大灰狼穿上了奶奶的衣服躺在床上。当小红帽来时没有认出大灰狼，也被它吞了下去。在佩罗的版本里，故事就此结束。在后来的意大利版本里，小红帽在没有得到其他人的帮助的情况下，凭著自己的智慧逃出了大灰狼的掌心。不过在另一个后来的版本里，又更改成一位伐木工人来救她，而这情节在格林童话的版本中变成一位猎人路过，把狼杀了，并把二人从狼肚里面救了出来。后来，又有人编写出小红帽去奶奶家途中再一次遇上大野狼，最后小红帽用奶奶刚煮过香肠的热水把大野狼烫死的版本。</简介>
+    <原文 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >从前有个可爱的小姑娘，谁见了都喜欢，但最喜欢她的是她的外婆，简直是她要什么就给她什么。一次，外婆送给小姑娘一顶用丝绒做的小红帽，戴在她的头上正好合适。从此，姑娘再也不愿意戴任何别的帽子，于是大家便叫她“小红帽”。
+一天，妈妈对小红帽说：“来，小红帽，这里有一块蛋糕和一瓶葡萄酒，快给外婆送去，外婆生病了，身子很虚弱，吃了这些就会好一些的。趁着现在天还没有黑，赶紧动身吧。在路上要好好走，不要跑，也不要离开大路，否则你会摔跤的，那样外婆就什么也吃不上了。到外婆家的时候，别忘了说‘早上好’，也不要一进屋就东瞧西瞅。”
+“我会小心的。”小红帽对妈妈说，并且还和妈妈拉手作保证。
+外婆住在村子外面的森林里，离小红帽家有很长一段路。小红帽刚走进森林就碰到了一条狼。小红帽不知道狼是坏家伙，所以一点也不怕它。
+“你好，小红帽，”狼说。
+“你好，狼先生。”
+“小红帽，这么早要到哪里去呀？”
+“我要到外婆家去。”
+“你那围裙下面有什么呀？”
+“蛋糕和葡萄酒。昨天我们家烤了一些蛋糕，可怜的外婆生了病，要吃一些好东西才能恢复过来。”
+“你外婆住在哪里呀，小红帽？”
+“进了林子还有一段路呢。她的房子就在三棵大橡树下，低处围着核桃树篱笆。你一定知道的。”小红帽说。
+狼在心中盘算着：“这小东西细皮嫩肉的，味道肯定比那老太婆要好。我要讲究一下策略，让她俩都逃不出我的手心。”于是它陪着小红帽走了一会儿，然后说：“小红帽，你看周围这些花多么美丽啊！干吗不回头看一看呢？还有这些小鸟，它们唱得多么动听啊！你大概根本没有听到吧？林子里的一切多么美好啊，而你却只管往前走，就像是去上学一样。”
+小红帽抬起头来，看到阳光在树木间来回跳荡，美丽的鲜花在四周开放，便想：“也许我该摘一把鲜花给外婆，让她高兴高兴。现在天色还早，我不会去迟的。”她于是离开大路，走进林子去采花。她每采下一朵花，总觉得前面还有更美丽的花朵，便又向前走去，结果一直走到了林子深处。
+就在此时，狼却直接跑到外婆家，敲了敲门。
+“是谁呀？”
+“是小红帽。”狼回答，“我给你送蛋糕和葡萄酒来了。快开门哪。”
+“你拉一下门栓就行了，”外婆大声说，“我身上没有力气，起不来。”
+狼刚拉起门栓，那门就开了。狼二话没说就冲到外婆的床前，把外婆吞进了肚子。然后她穿上外婆的衣服，戴上她的帽子，躺在床上，还拉上了帘子。
+可这时小红帽还在跑来跑去地采花。直到采了许多许多，她都拿不了，她才想起外婆，重新上路去外婆家。
+看到外婆家的屋门敞开着，她感到很奇怪。她一走进屋子就有一种异样的感觉，心中便想：“天哪！平常我那么喜欢来外婆家，今天怎么这样害怕？”她大声叫道：“早上好！”，可是没有听到回答。她走到床前拉开帘子，只见外婆躺在床上，帽子拉得低低的，把脸都遮住了，样子非常奇怪。
+“哎，外婆，”她说，“你的耳朵怎么这样大呀？”
+“为了更好地听你说话呀，乖乖。”
+“可是外婆，你的眼睛怎么这样大呀？”小红帽又问。
+“为了更清楚地看你呀，乖乖。”
+“外婆，你的手怎么这样大呀？”
+“可以更好地抱着你呀。”
+“外婆，你的嘴巴怎么大得很吓人呀？”
+“可以一口把你吃掉呀！”
+狼刚把话说完，就从床上跳起来，把小红帽吞进了肚子，狼满足了食欲之后便重新躺到床上睡觉，而且鼾声震天。一位猎人碰巧从屋前走过，心想：“这老太太鼾打得好响啊！我要进去看看她是不是出什么事了。”猎人进了屋，来到床前时却发现躺在那里的竟是狼。 “你这老坏蛋，我找了你这么久，真没想到在这里找到你！”他说。他正准备向狼开枪，突然又想到，这狼很可能把外婆吞进了肚子，外婆也许还活着。猎人就没有开枪，而是操起一把剪刀，动手把呼呼大睡的狼的肚子剪了开来。他刚剪了两下，就看到了红色的小帽子。他又剪了两下，小姑娘便跳了出来，叫道：“真把我吓坏了！狼肚子里黑漆漆的。”接着，外婆也活着出来了，只是有点喘不过气来。小红帽赶紧跑去搬来几块大石头，塞进狼的肚子。狼醒来之后想逃走，可是那些石头太重了，它刚站起来就跌到在地，摔死了。
+三个人高兴极了。猎人剥下狼皮，回家去了；外婆吃了小红帽带来的蛋糕和葡萄酒，精神好多了；而小红帽却在想：“要是妈妈不允许，我一辈子也不独自离开大路，跑进森林了。”</原文>
+    <名称 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >小红帽</名称>
+  </故事>
+  <歌曲 rdf:about="Knowledgebase_Class2">
+    <名称 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >宁夏</名称>
+    <演唱>
+      <歌手 rdf:about="Knowledgebase_Class33">
+        <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >梁翠萍</别名>
+        <姓名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >梁静茹</姓名>
+        <性别 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >女</性别>
+        <简介 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >1978年6月16日出生于马来西亚森美兰州瓜拉庇劳县，华语流行女歌手。</简介>
+      </歌手>
+    </演唱>
+    <歌词 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >宁静的夏天
+天空中繁星点点
+心里头有些思念
+思念着你的脸
+我可以假装看不见
+也可以偷偷的想念
+直到让我摸到你那温暖 的脸
+宁静的夏天
+天空中繁星点点
+心里头有些思念
+思念着你的脸
+我可以假装看不见
+也可以偷偷的想念
+直到让我摸到你那温暖 的脸
+知了也睡了
+安心的睡了
+在我心里面 宁静的夏天
+知了也睡了
+安心的睡了
+在我心里面 宁静的夏天
+宁静的夏天
+天空中繁星点点
+心里头有些思念
+思念着你的脸
+我可以假装看不见
+也可以偷偷的想念
+直到让我摸到你那温暖 的脸
+那是个宁静的夏天
+你来到宁夏的那一天
+知了也睡了
+安心的睡了
+在我心里面 宁静的夏天
+知了也睡了
+安心的睡了
+在我心里面 宁静的夏天</歌词>
+  </歌曲>
+  <概念 rdf:about="Knowledgebase_Class44">
+    <名称 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >大熊猫</名称>
+    <简介 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >大熊猫属于哺乳纲、食肉目、熊科，是大熊猫亚科和大熊猫属唯一哺乳动物，体色为黑白两色，它有着圆形脸颊，两个大黑眼圈，壮硕的身体，标志性的内八字行走方式，也有解剖刀般锋利的爪子。</简介>
+  </概念>
+  <故事 rdf:about="Knowledgebase_Class24">
+    <原文 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >从前有一座山，山上有座小庙，有一天庙里来了个小和尚。他每天挑水、念经、敲木鱼，给菩萨案桌上的水瓶添水，夜里不让老鼠来偷东西，生活过得安稳自在。不久，庙里又来了个瘦和尚。他一来就喝掉半缸水。小和尚叫他去挑水，瘦和尚最初去挑水了，但是后来看到小和尚在庙里清闲自在心想一个人去挑水太吃亏了 ，便要小和尚和他一起去抬水。两个人只能抬一只桶，而且水桶必须放在担子的中央，两人才心安理得。这样总算还有水喝。而两人的关系也僵化了。后来，又来了个胖和尚。他也想喝水，但缸里没水。小和尚和瘦和尚叫他自己去挑，胖和尚挑来一担水，立刻独自喝光了。从此谁也不挑水，三个和尚就没水喝。大家各念各的经，各敲各的木鱼，到最后干脆把菩萨面前的净水瓶里面的水抢着喝干了，也没人添水，花草枯萎了。夜里老鼠出来偷东西，谁也不管。结果老鼠猖獗，打翻烛台，燃起大火。三个和尚这才一起奋力救火 ，大火扑灭了，他们也觉醒了。从此三个和尚齐心协力，水自然就更多了。</原文>
+    <简介 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >《三个和尚》是中国民间谚语故事，通过三个和尚没水吃、寺庙失火、三个和尚齐心协力救火直至后来三人合作吊水的情节，既批评了“三个和尚没水吃”这种社会上存在的落后思想，又提倡了“人心齐，泰山移”的社会新风尚，与现实生活紧密地联系在一起 。</简介>
+    <名称 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >三个和尚</名称>
+  </故事>
+  <歌曲 rdf:about="Knowledgebase_Class3">
+    <演唱>
+      <歌手 rdf:about="Knowledgebase_Class35">
+        <性别 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >女</性别>
+        <姓名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >郭静</姓名>
+        <简介 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >1980年8月5日出生于香港特别行政区，毕业于台湾世新大学，中国台湾女歌手，福茂唱片公司艺人。</简介>
+        <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >郭小静</别名>
+        <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >郭小瑜</别名>
+      </歌手>
+    </演唱>
+    <名称 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >拥抱你的微笑</名称>
+    <歌词 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >遇见幸福仰望 一段好时光
+走过了 寂寞的 太平洋
+每次眺望 都与你分享
+拥抱你的微笑像太阳
+时间推著我们慢慢长大
+要离开我那最熟悉的地方
+在心中计划 一个梦想
+就算再难我也要前往
+勇气陪伴我去打败害怕
+大口深呼吸就点亮希望
+世界那麽大 要活的更晴朗 不一样
+让每段回忆都值得收藏
+遇见幸福 仰望一段好时光
+走过了 寂寞的 太平洋
+每次眺望 都与你分享
+拥抱你的微笑像太阳
+遇见幸福 仰望一段好时光
+走过了 寂寞的 太平洋
+每次眺望 未来的愿望（幸福就站在前方）
+拥抱你的微笑像太阳
+勇气陪伴我去打败害怕
+大口深呼吸就点亮希望
+世界那麽大 要活的更晴朗 不一样
+让每段回忆都值得收藏
+遇见幸福 仰望一段好时光
+走过了 寂寞的 太平洋
+每次眺望 都与你分享（幸福就站在前方）
+拥抱你的微笑像太阳
+遇见幸福 仰望一段好时光
+走过了 寂寞的 太平洋
+每次眺望 未来的愿望（幸福就站在前方）
+拥抱你的微笑像太阳
+遇见幸福 仰望一段好时光
+走过了 寂寞的 太平洋
+每次眺望 都与你分享
+遇见幸福 仰望一段好时光
+走过了 寂寞的 太平洋
+每次眺望 未来的愿望（幸福就站在前方）
+拥抱你的微笑像太阳</歌词>
+  </歌曲>
+  <诗 rdf:about="Knowledgebase_Class19">
+    <简介 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >《行路难三首》是唐代伟大诗人李白的组诗作品。这三首诗抒写了诗人在政治道路上遭遇艰难后的感慨。诗中跌宕起伏的感情，跳跃式的思维，以及高昂的气势，使作品具有独特的艺术魅力，成为后人广为称颂的千古名篇。全诗蕴意波澜起伏，跌宕多姿。</简介>
+    <名称 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >行路难</名称>
+    <原文 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >金樽清酒斗十千，玉盘珍羞直万钱。
+停杯投箸不能食，拔剑四顾心茫然。
+欲渡黄河冰塞川，将登太行雪满山。
+闲来垂钓碧溪上，忽复乘舟梦日边。
+行路难！行路难！多岐路，今安在？
+长风破浪会有时，直挂云帆济沧海。</原文>
+    <作者>
+      <作家 rdf:about="Knowledgebase_Class5">
+        <姓名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >李白</姓名>
+        <简介 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >李白（701年－762年），字太白，号青莲居士，又号“谪仙人”，是唐代伟大的浪漫主义诗人，被后人誉为“诗仙”，与杜甫并称为“李杜”，为了与另两位诗人李商隐与杜牧即“小李杜”区别，杜甫与李白又合称“大李杜” 。其人爽朗大方，爱饮酒作诗，喜交友。</简介>
+        <性别 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >男</性别>
+        <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >李供奉</别名>
+        <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >李拾遗</别名>
+        <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >诗仙</别名>
+        <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >李翰林</别名>
+        <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >李十二</别名>
+      </作家>
+    </作者>
+  </诗>
+  <概念 rdf:about="Knowledgebase_Class21">
+    <简介 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >互联网，又称网际网络，或音译英特网，互联网始于1969年美国的阿帕网。是网络与网络之间所串连成的庞大网络，这些网络以一组通用的协议相连，形成逻辑上的单一巨大国际网络。这种将计算机网络互相联接在一起的方法可称作“网络互联”，在这基础上发展出覆盖全世界的全球性互联网络称互联网，即是互相连接一起的网络结构。互联网并不等同万维网，万维网只是一建基于超文本相互链接而成的全球性系统，且是互联网所能提供的服务其中之一。</简介>
+    <名称 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >互联网</名称>
+  </概念>
+  <菜谱 rdf:about="Knowledgebase_Class36">
+    <辅料 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >豆瓣酱、生抽、姜、大蒜、白砂糖、小葱、醋</辅料>
+    <主料 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >茄子</主料>
+    <步骤 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >茄子掰洗干净；生姜，大蒜切成细末；茄子用刀子斜着切，切至三分之一处，反方向，切网格形状。将茄子反过来，背面，同样切网格；平底锅烧热，倒油，将茄子放入；两面煎软，把茄子刨到锅的边上；拿一小碗一勺生抽、两勺醋、两勺糖，少许清水倒入碗内；把煎好的茄子刨到一边，放入葱蒜姜末，豆瓣酱煸炒出香味；倒入鱼香汁。汤汁熬煮至粘稠，关火即可。</步骤>
+    <名称 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >鱼香茄子</名称>
+    <简介 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >鱼香茄子又称余香茄子，是四川省传统的特色名菜之一。属于川菜系中比较具有代表性的鱼香味型的名菜，与鱼香猪肝、鱼香肉丝和鱼香三丝等菜齐名，深受欢迎。</简介>
+    <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >余香茄子</别名>
+  </菜谱>
+  <诗 rdf:about="Knowledgebase_Class18">
+    <原文 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >花间一壶酒，独酌无相亲。
+举杯邀明月，对影成三人。
+月既不解饮，影徒随我身。
+暂伴月将影，行乐须及春。
+我歌月徘徊，我舞影零乱。
+醒时同交欢，醉后各分散。
+永结无情游，相期邈云汉。</原文>
+    <作者 rdf:resource="Knowledgebase_Class5"/>
+    <简介 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >《月下独酌四首》是唐代诗人李白的组诗作品。这四首诗写诗人在月夜花下独酌，无人亲近的冷落情景。诗意表明，诗人心中愁闷，遂以月为友，对酒当歌，及时行乐。组诗运用丰富的想象，表达出诗人由孤独到不孤独，再由不孤独到孤独的一种复杂感情。表面看来，诗人真能自得其乐，可是深处却有无限的凄凉。全诗笔触细腻，构思奇特，体现了诗人怀才不遇的寂寞和孤傲，在失意中依然旷达乐观、放浪形骸、狂荡不羁的豪放个性。</简介>
+    <名称 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >月下独酌</名称>
+  </诗>
+  <电影 rdf:about="Knowledgebase_Class10051">
+    <名称 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >独立日</名称>
+    <主演>
+      <歌手 rdf:about="Knowledgebase_Class10050">
+        <姓名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >威尔·史密斯</姓名>
+        <rdf:type rdf:resource="#演员"/>
+        <简介 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >威尔·史密斯，美国演员、歌手，1968年9月25日出生于美国宾夕法尼亚州费城。他12岁时以说唱歌手的身份踏入演艺圈，并于1985年与杰夫·汤恩斯组成组合，随后两度获得格莱美奖。1993年，威尔·史密斯开始登上大荧幕，主演影片《六度分离》 。随后《绝地战警》《独立日》等作品使他逐步确立了影坛的地位。1997年推出的《黑衣人》系列则可以认为是威尔·史密斯在商业电影上最成功的作品之一。同时，他还因主演《拳王阿里》和《当幸福来敲门》两度获得奥斯卡最佳男主角奖提名。2015年，威尔·史密斯收入2600万美元，居福布斯全球演员富豪榜并列第18位。2015年11月1日，在洛杉矶举行的第19届好莱坞电影奖上，凭借《脑震荡》获得最佳男演员。</简介>
+        <性别 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >男</性别>
+      </歌手>
+    </主演>
+    <主演>
+      <演员 rdf:about="Knowledgebase_Class10049">
+        <性别 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >男</性别>
+        <简介 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >比尔·普尔曼，1953年12月17日出生在纽约州的Hornell，美国演员、好莱坞影星。1995年，出演大片《二见钟情》后一炮而红。</简介>
+        <姓名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >比尔·普尔曼</姓名>
+      </演员>
+    </主演>
+    <剧情 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >美国人正准备热烈庆祝七月四日国庆日之前，美国各地的监视站发现一艘直达数百英里的巨大飞船接近了地球。飞船发出的无线电信号干扰了地球的通信卫星信号。外星舰队竟大举包围地球，飞船放出了36艘直径达15英里的子飞船飞抵地球上各大城市的上空。世界上的人们感到了迷惑和恐惧，但也有人想要欢迎外星友好使者的来临。
+电脑工程师戴维发现，外星人发出的信号其实是攻击的倒计时信号。戴维设法把这个信息通知了他的妻子康妮：她是总统的助理，为了工作她与戴维的关系已经破裂。政府试图与外星人联络，但毫无反应，总统为此忧心忡忡。在得知戴维带来的讯息后，他急忙下令撤离，但为时已晚。外星人的飞船开始对美国几个大城市展开致命的攻击。
+于是智勇双全的美国总统托马斯·普尔曼号召世界各国共御外侮，将七月四日就变成地球的独立日。在电脑工程师戴维和黑人空军飞行员史蒂文等人协助下，地球人对外星人展开全面反攻，总统更亲自驾驶战斗机冲上第一线。美国空军向外星人飞船发动了进攻，却有如以卵击石，毫无作用唯有飞行员史蒂文设法诱使一架外星人战斗飞艇坠毁。
+在攻击中幸存的人们开始设法逃生，总统在千钧一发之际和戴维等人离开了首都。总统和戴维博士一行来到了代号为51区的罗斯韦尔基地。在那里，科学家们一直在研究一艘于50多年前坠毁的外星人飞艇。但由于国防部长个人的政治野心，总统却对此一无所知，从而未能及早预防惨剧发生。
+戴维想出了利用电脑病毒使外星人的保护力场失效的方法。在修复了那架50多年前的飞艇之后，史蒂文要驾驶飞艇和戴维一起混进外星人的母舰。与此同时，美国也向世界各国的残存军队发出了总反攻的信号。史蒂文和戴维成功地闯入了外星人的母舰并输入病毒，解除了外星人的保护力场。总统亲自驾驶飞机与外星人作战。史蒂文和戴维将一颗核弹射入了外星人母舰的中心，并在千钧一发之际逃出了外星人的母舰。
+外星人被打败了，戴维和史蒂文安然归来。人类终于大难不亡，在最后的关头消灭了外星侵略者。在一片废墟上，人类将开始重建家园 。</剧情>
+    <指导>
+      <导演 rdf:about="Knowledgebase_Class10048">
+        <姓名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >罗兰·艾默里奇</姓名>
+        <简介 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >罗兰·艾默里奇，1955年11月10日出生于德国斯图加特，毕业于斯图加特艺术大学绘画、雕刻专业，德国导演、制片人、编剧。1984年，执导个人第一部科幻片《诺亚方舟准则》，该片获得第34届柏林国际电影节金熊奖提名[1]  。1990年，拍摄科幻片《霹雳雄鹰》。1994年，执导科幻动作片《宇宙奇兵》。1998年，凭借编导的科幻恐怖片《哥斯拉》获得欧洲电影奖观众票选最佳导演奖。2000年，执导战争片《爱国者》 。2004年，执导灾难片《后天》 。2009年，执导灾难片《2012》，该片获得青少年选择奖最佳科幻电影提名。2013年，执导灾难动作片《惊天危机》，该片获得美国人民选择奖最佳动作电影提名。2016年，执导科幻片《月亮坠落》 。</简介>
+        <性别 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >男</性别>
+      </导演>
+    </指导>
+    <简介 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >《独立日》是美国1996年上映的一部科幻片，由罗兰·艾默里奇执导，威尔·史密斯、比尔·普尔曼和杰夫·高布伦等联袂出演，于1996年7月3日在美国上映。影片主要讲述一艘巨型的外星人母船进入地球轨道，并释放了三十多个小型飞船进入地球大气层，停留在世界几大城市上空，造成人们的恐慌。美国总统（比尔·普尔曼饰）联合各国领袖共商解决之道，科学家（杰夫·高布伦饰）和陆战队航空兵上尉史蒂芬希尔（威尔·史密斯饰）合作为人类的命运奋斗，从而阻止外星人入侵，捍卫地球的故事 。</简介>
+  </电影>
+  <歌曲 rdf:about="Knowledgebase_Class4">
+    <歌词 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >你的影子无所不在
+人的心事像一颗尘埃
+落在过去 飘向未来
+掉进眼里就流出泪来
+曾经沧海无限感慨
+有时孤独比拥抱实在
+让心春去 让梦秋来 让你离开
+舍不得忘 一切都是为爱
+没有遗憾 还有我
+就让往事随风
+都随风 都随风 心随你动
+昨天花谢花开
+不是梦 不是梦 不是梦
+就让往事随风
+都随风 都随风 心随你痛
+明天潮起潮落
+都是我 都是我 都是我
+就让往事随风
+都随风 都随风 心随你动
+昨天花谢花开
+不是梦 不是梦 不是梦
+就让往事随风
+都随风 都随风 心随你痛
+明天潮起潮落
+都是我 都是我 都是我
+你的影子无所不在
+人的心事像一颗尘埃
+落在过去 飘向未来
+掉进眼里就流出泪来
+曾经沧海无限感慨
+有时孤独比拥抱实在
+让心春去 让梦秋来 让你离开
+舍不得忘 一切都是为爱
+没有遗憾 还有我
+就让往事随风
+都随风 都随风 心随你动
+昨天花谢花开
+不是梦 不是梦 不是梦
+就让往事随风
+都随风 都随风 心随你痛
+明天潮起潮落
+都是我 都是我 都是我
+就让往事随风
+都随风 都随风 心随你动
+昨天花谢花开
+不是梦 不是梦 不是梦
+就让往事随风
+都随风 都随风 心随你痛
+明天潮起潮落
+都是我 都是我 都是我</歌词>
+    <名称 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >往事随风</名称>
+    <演唱>
+      <歌手 rdf:about="Knowledgebase_Class34">
+        <简介 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >1960年1月12日出生于台湾省台中市，歌手齐豫的弟弟，中国台湾男歌手、音乐创作人。</简介>
+        <性别 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >男</性别>
+        <姓名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >齐秦</姓名>
+        <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >小哥</别名>
+      </歌手>
+    </演唱>
+  </歌曲>
+  <电影 rdf:about="Knowledgebase_Class10041">
+    <简介 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >《赛车总动员》是由皮克斯动画工厂制作，并由迪士尼于2006年发行的电脑动画电影。该片由约翰·拉塞特执导，并且由欧文·威尔逊、保罗·纽曼、邦妮·亨特等人配音演出，在2006年6月9日于美国、台湾上映，中国大陆上映日则为2006年8月22日。这是迪士尼和皮克斯的第七部动画长片，也是在迪士尼买下皮克斯之前，两家公司旧有合约下的最后一部电影。</简介>
+    <名称 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >赛车总动员</名称>
+    <剧情 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >“闪电”麦昆出生时就是一部性能优良的高级赛车，当他毫无悬念地连续两次在活赛杯大奖赛中胜出、成为最年轻的冠军跑车时，太过一帆风顺的生活却让他产生了无所适从的茫然感。一次偶然的迷路，让麦昆离开了主赛道，来到一个位于“66号州际公路”（高速公路）边上的小镇。麦昆从没想过，在这条横穿整个美国的主路边上，竟然还有如此落后的汽车村落，里面居住的几乎全部是快被淘汰的旧款车，他们在繁华的现代社会中另辟蹊径，建立了一个完全与世隔绝的原始世界。
+作为赛车场上的明日之星，麦昆本来不屑与这些上不了台面的生锈铁皮打交道，然而在被困在镇上的几日里，他却渐渐被这些反传统的汽车居民们所吸引，通过与他们从相识到相知，第一次认识到这个世界上还有比奖杯、名誉和赞助商更加重要的事情，生活就像旅程一样，应该注重的是其中的过程，而不是一个又一个的目的地。</剧情>
+    <指导>
+      <导演 rdf:about="Knowledgebase_Class10040">
+        <性别 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >男</性别>
+        <简介 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >乔·兰福特，1960年3月13日出生，2005年8月16日过逝，出生于美国加利福尼亚州帕萨迪纳，是一名 编剧、演员、 制片、 导演。</简介>
+        <姓名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >乔·兰福特</姓名>
+      </导演>
+    </指导>
+    <指导>
+      <导演 rdf:about="Knowledgebase_Class10039">
+        <简介 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >约翰·拉塞特，1957年1月12日出生，是一位美国的动画师、电影导演、皮克斯动画工作室和华特·迪斯尼动画工作室的首席创意官以及华特·迪士尼幻想工程的首席创意顾问。很多人把他看作“当代的华特·迪士尼”。</简介>
+        <姓名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >约翰·拉塞特</姓名>
+        <性别 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >男</性别>
+      </导演>
+    </指导>
+  </电影>
+  <菜谱 rdf:about="Knowledgebase_Class22">
+    <步骤 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >准备茶叶；先用开水泡半分钟沥出茶水不用；重新放入碗中泡入开水待用；虾仁洗净后沥干水分，挑去虾线；用盐，料酒，生粉，蛋清上浆盖上保鲜膜进入冰箱冷藏2小时让其膨胀；热锅倒入油，油温5分热；倒入虾仁迅速划散，变色后盛起；另起锅倒入茶水；倒入料酒大火煮开；加入盐；倒入虾仁保持大火；加入适量鸡精提鲜后熄火出锅。</步骤>
+    <名称 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >龙井虾仁</名称>
+    <主料 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >虾仁、茶叶</主料>
+    <简介 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >龙井虾仁是一道体现西湖秀气气质的传统名菜，也品尝过无数次，自己没尝试做过，见了粒粒饱满的泰国虾仁就尝试自己做做，口感特棒，味道鲜美，清香解腻。</简介>
+    <辅料 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >油、生粉、盐、料酒、鸡精</辅料>
+  </菜谱>
+  <诗 rdf:about="Knowledgebase_Class17">
+    <原文 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >床前明月光，疑是地上霜。
+举头望明月，低头思故乡。</原文>
+    <作者 rdf:resource="Knowledgebase_Class5"/>
+    <简介 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >《静夜思》是唐代诗人李白所作的一首五言古诗 。此诗描写了秋日夜晚，诗人于屋内抬头望月的所感。诗中运用比喻、衬托等手法，表达客居思乡之情，语言清新朴素而韵味含蓄无穷，历来广为传诵。</简介>
+    <名称 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >静夜思</名称>
+  </诗>
+  <电影 rdf:about="Knowledgebase_Class10031">
+    <简介 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >《星球大战》系列电影是由卢卡斯电影公司出品的科幻电影。卢卡斯电影公司首先于1977年推出了《星球大战》，之后又分别在1980年和1983年推出了《星球大战2》和《星球大战3》。之后又推出了星球大战前传三部曲，前传1、2、3分别于1999年、2002年和2005年上映。</简介>
+    <名称 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >星球大战</名称>
+    <主演>
+      <演员 rdf:about="Knowledgebase_Class10035">
+        <简介 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >娜塔丽·波特曼，1981年6月9日出生于以色列耶路撒冷，美国演员。13岁时，她出演《这个杀手不太冷》的女主角，开始了一边读书一边拍戏的生涯。1999年，波特曼以《芳心天涯》片中安·奥格斯特一角获得金球奖最佳女配角的提名。1999年，成年后的她凭借《星球大战》三部曲帕德梅·阿米达拉（Padmé Amidala）女王一角为大众熟知，之后，波特曼进入哈佛大学攻读心理学。2011年，娜塔莉·波特曼凭借电影《黑天鹅》里人格分裂的芭蕾舞者角色，获得了奥斯卡最佳女主角奖。</简介>
+        <性别 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >女</性别>
+        <姓名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >娜塔丽·波特曼</姓名>
+      </演员>
+    </主演>
+    <主演>
+      <演员 rdf:about="Knowledgebase_Class10034">
+        <姓名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >哈里森·福特</姓名>
+        <简介 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >哈里森·福特，1942年7月13日出生于美国芝加哥，美国电影演员。1966年初登影坛。1977年主演《星球大战》，饰演汉·索洛船长而成名。1980年出演电影《星球大战5：帝国反击战》，确立了影坛地位。1981年，主演影片《夺宝奇兵》。</简介>
+        <性别 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >男</性别>
+      </演员>
+    </主演>
+    <指导>
+      <导演 rdf:about="Knowledgebase_Class10055">
+        <性别 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >男</性别>
+        <简介 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >厄文·克什纳，曾学习过音乐和摄影，50多岁时才开始为美国新闻署拍摄纪录片，20世纪60~70年代则开始制作电视剧以及电影，其中著名的电影作品包括007系列中肖恩·康纳利主演的《脂粉金刚》、《巡弋飞弹》，1990年还拍了《铁甲威龙2》。当然，他最为人知的影片还是1980年的《帝国反击战》。厄文·克什纳曾是乔治·卢卡斯在南加州大学时的老师。卢卡斯拍完第一部“星战”电影后力邀他导演续集，结果《帝国反击战》被认为是“星战”系列中最出色的一部。</简介>
+        <姓名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >厄文·克什纳</姓名>
+      </导演>
+    </指导>
+    <剧情 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >《星球大战前传一：幽灵的威胁》将带领观众们来到《星球大战》传奇的最开始时候。最初的三部曲（星球大战之一：新的希望；星球大战之二：帝国反击战；星球大战之三：绝地归来）告诉了我们卢克·天行者从一个年轻的农场男孩成长为一个对抗邪恶的银河帝国的英雄，并不得不对抗帝国最具神秘色彩的军事领袖，掌握他父亲命运的黑面人达斯·维德。而《星球大战前传一：幽灵的威胁》将告诉我们阿纳金·天行者的故事，他将从一个天真的男孩开始，不断追寻他的梦想、对抗他的恐惧，在乱世中成长为银河帝国邪恶的军事领袖—达斯·维德。
+前传一将观众们带到荒漠般的星球塔图因，巨大的银河首都科洛桑（和它的绝地圣殿），绿色世界纳布，还有绝地武士中重要的角色尤达大师、R2-D2、C-3PO和贾巴。在《星球大战前传一：幽灵的威胁》里，卢克·天行者的父亲只是一个充满朝气的9岁男孩，叫阿纳金。他对今后成为黑暗主宰的命运一无所知。在这早期的日子里，欧比旺·克诺比是一个有坚毅性格的绝地武士，魁刚·金是他的导师，他尽力教他的学生绝地之道，因为在这政治混乱的年代里，绝地武士们已经被分隔得七零八落了。
+故事以金和欧比旺在贸易联盟的飞船上受到贸易联盟袭击开始。在逃亡之际，他们遇到了帕德梅·阿米达拉女王等人。在逃亡过程中，他们的飞船发生了故障被迫降落在塔图因。在飞船维修期间，他们认识了在星球上当奴隶的阿纳金及其母亲施密。而令金和欧比旺感到惊讶的是阿纳金居然拥有非常强大的力量，因此他们俩决定帮助阿纳金重获自由，并将他训练成为一位绝地武士。但当他们正要离开塔图因时，却遇到了邪恶的达斯·摩尔，经过一番奋勇搏斗后，他们才得以逃脱魔爪。后来，他们去了科洛桑，并与银河议会的最高议长会晤，商讨贸易联盟入侵纳布一事。同时金指出要将阿纳金训练成为绝地武士，但遭到绝地委员会的极力反对，因为他们看出在阿纳金内心深处充满愤怒和仇恨，但金没有理会，仍要坚持训练阿纳金。后来，金和欧比旺再次返回纳布星球，协助对抗达斯·摩尔的入侵。这是一场激战。最后，金被达斯·摩尔所杀，在爆发的欧比旺·克诺比的剑下，达斯·摩尔也难逃一死。战后，为实现金的遗愿，欧比旺继续训练阿纳金。</剧情>
+    <主演>
+      <演员 rdf:about="Knowledgebase_Class10033">
+        <性别 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >男</性别>
+        <简介 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >塞缪尔·杰克逊，1948年12月21日出生于美国华盛顿，美国影视演员、制片人。1991年，他出演了《丛林热》，并因此获得戛纳影展最佳男配角奖。1994年，塞缪尔·杰克逊仅凭《低俗小说》同时获得奥斯卡、金球奖等奖项的提名。2000年，他首次作为主演出演了电影《黑豹》，他还被法国杜维尔电影节授予终生成就奖。</简介>
+        <姓名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >塞缪尔·杰克逊</姓名>
+      </演员>
+    </主演>
+    <指导>
+      <导演 rdf:about="Knowledgebase_Class30">
+        <姓名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >乔治·卢卡斯</姓名>
+        <简介 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >乔治·卢卡斯，1944年5月14日出生于美国加州，美国导演、制片人、编剧。</简介>
+        <性别 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >男</性别>
+      </导演>
+    </指导>
+    <主演>
+      <演员 rdf:about="Knowledgebase_Class10036">
+        <性别 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >男</性别>
+        <姓名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >海登·克里斯滕森</姓名>
+        <简介 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >海登·克里斯滕森，1981年4月19日出生于加拿大温哥华，加拿大男演员。1994年出演首部电影《战栗黑洞》；2000年主演电视剧《高地》而受到关注；2001年主演电影《情系屋檐下》入围金球奖最佳男配角奖并获得美国国家影评人协会奖最佳突破男演员奖；2002年凭借电影《星战前传2：克隆人的进攻 》获得拉斯帕尔马电影节最佳男演员奖；2013年主演好莱坞历史电影《绝命逃亡》。</简介>
+      </演员>
+    </主演>
+  </电影>
+  <电影 rdf:about="Knowledgebase_Class10047">
+    <指导>
+      <导演 rdf:about="Knowledgebase_Class10044">
+        <rdf:type rdf:resource="#演员"/>
+        <简介 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >摩根·弗里曼，1937年6月1日出生于美国田纳西州，美国演员、导演。1967年，弗里曼出演百老汇歌舞剧《我爱红娘》。1987年，弗里曼凭借在《黑狱风云》中的表演获得了当年奥斯卡最佳男配角和金球奖最佳男配角的两项提名。1989年，他凭借着在《为戴西小姐开车》中的忠厚诚实、善良勇敢的老司机形象获得了奥斯卡最佳男主角的提名。而1994年上映的《肖申克的救赎》一片又让他第三次获得奥斯卡金像奖提名。2005年，他凭借《百万美元宝贝》获得第77届奥斯卡最佳男配角奖。2010年11月，摩根·弗里曼获得美国电影学院终身成就奖 。2012年，他出演的《蝙蝠侠：黑暗骑士崛起》上映。2014年，摩根·费里曼出演的《超验骇客》上映。</简介>
+        <性别 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >男</性别>
+        <姓名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >摩根·弗里曼</姓名>
+      </导演>
+    </指导>
+    <名称 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >肖申克的救赎</名称>
+    <简介 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >《肖申克的救赎》是由弗兰克·达拉邦特执导，蒂姆·罗宾斯、摩根·弗里曼等主演。该片改编自斯蒂芬·金《四季奇谭》中收录的同名小说，该片中涵盖全片的主题是“希望”，全片透过监狱这一强制剥夺自由、高度强调纪律的特殊背景来展现作为个体的人对“时间流逝、环境改造”的恐惧。影片的结局有《基督山伯爵》式的复仇宣泄。入选美国电影学会20世纪百大电影清单。</简介>
+    <主演>
+      <演员 rdf:about="Knowledgebase_Class10045">
+        <简介 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >蒂姆·罗宾斯，1958年10月16日生于加州，美国男演员、导演、编剧及制片人。1984年，出演了他第一部电影《玩具兵》。1981年，他创立了“洛杉矶演员班剧团”。1992年凭影片《超级大玩家》夺得戛纳电影节及金球奖最佳男主角。1995年凭自编自导影片《死囚漫步》获得奥斯卡最佳导演提名及金球奖最佳编剧提名。2004年凭借《神秘河》荣获奥斯卡金像奖及金球奖最佳男配角奖。2008年10月10日，在好莱坞星光大道留下手印和脚印。2012年，受邀来华参演冯小刚执导的《一九四二》。2016年2月14日，获得第66届柏林国际电影节颁发终身成就奖 。</简介>
+        <姓名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >蒂姆·罗宾斯</姓名>
+        <性别 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >男</性别>
+      </演员>
+    </主演>
+    <主演 rdf:resource="Knowledgebase_Class10044"/>
+    <剧情 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >故事发生在1947年，银行家安迪被指控枪杀了妻子及其情人，安迪被判无期徒刑，这意味着他将在肖恩克监狱中渡过余生。
+瑞德1927年因谋杀罪被判无期徒刑，数次假释都未获成功。他成为了肖恩克监狱中的“权威人物”，只要你付得起钱，他几乎有办法搞到任何你想要的东西：香烟、糖果、酒，甚至是大麻。每当有新囚犯来的时候，大家就赌谁会在第一个夜晚哭泣。瑞德认为弱不禁风、书生气时足的安迪一定会哭，结果安迪的沉默使他输掉了两包烟。但同时也使瑞德对他另眼相看。
+好长时间以来，安迪不和任何人接触，在大家报怨的同时，他在院子里很悠闲地散步，就像在公园里一样。一个月后，安迪请瑞德帮他搞的第一件东西是一把小的鹤嘴锄，他的解释是他想雕刻一些小东西以消磨时光，并说他自己想办法逃过狱方的例行检查。不久，瑞德就玩上了安迪刻的国际象棋。之后，安迪又搞了一幅影星丽塔·海华丝的巨幅海报贴在了牢房的墙上。
+一次，安迪和另几个犯人外出劳动，他无意间听到监狱官在讲有关上税的事。安迪说他有办法可以使监狱官合法地免去这一大笔税金，做为交换，他为十几个犯人朋友每人争得了两瓶Tiger啤酒。喝着啤酒，瑞德说多年来，他又第一次感受到了自由的感觉。
+由于安迪精通财务制度方面的知识，很快使他摆脱了狱中繁重的体力劳动和其它变态囚犯的骚扰。不久，声名远扬的安迪开始为越来越多的狱警处理税务问题，甚至孩子的升学问题也来向他请教。同时安迪也逐步成为肖恩克监狱长沃登洗黑钱的重要工具。由于安迪不停地写信给州长，终于为监狱申请到了一小笔钱用于监狱图书馆的建设。监狱生活非常平淡，总要自己找一些事情来做。安迪听说瑞德原来很喜欢吹口琴，就买了一把送给他。夜深人静之后，可以听到悠扬而轻微的口琴声回荡在监狱里。
+一个年轻犯人的到来打破了安迪平静的狱中生活：这个犯人以前在另一所监狱服刑时听到过安迪的案子，他知道谁是真凶！但当安迪向监狱长提出要求重新审理此案时，却遭到了拒绝，并受到了单独禁闭两个月的严重惩罚。而为了防止安迪获释，监狱长却设计害死了知情人！
+面对残酷的现实，安迪变得很消沉。有一天，他对瑞德说：“如果有一天，你可以获得假释，一定要到某个地方替我完成一个心愿。那是我第一次和妻子约会的地方，把那里一棵大橡树下的一个盒子挖出来。到时你就知道是什么了。”当天夜里，风雨交加，雷声大作，已得到灵魂救赎的安迪越狱成功。
+原来二十年来，安迪每天都在用那把小鹤嘴锄挖洞，然后用海报将洞口遮住。安迪出狱后，领走了部分监狱长存的黑钱，并告发了监狱长贪污受贿的真相。监狱长在自己存小账本的保险柜里见到的是安迪留下的一本圣经，第一页写到“得救之道，就在其中”，另外圣经里边还有个挖空的部分，用来藏挖洞的鹤嘴锄。
+经过40年的监狱生涯，瑞德终于获得假释，他在与安迪约定的橡树下找到了一盒现金和一封安迪的手写信，两个老朋友终于在墨西哥阳光明媚的海滨重逢了 。</剧情>
+  </电影>
+  <概念 rdf:about="Knowledgebase_Class40">
+    <简介 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >云计算是基于互联网的相关服务的增加、使用和交付模式，通常涉及通过互联网来提供动态易扩展且经常是虚拟化的资源。云是网络、互联网的一种比喻说法。过去在图中往往用云来表示电信网，后来也用来表示互联网和底层基础设施的抽象。因此，云计算甚至可以让你体验每秒10万亿次的运算能力，拥有这么强大的计算能力可以模拟核爆炸、预测气候变化和市场发展趋势。用户通过电脑、笔记本、手机等方式接入数据中心，按自己的需求进行运算。</简介>
+    <名称 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >云计算</名称>
+  </概念>
+  <菜谱 rdf:about="Knowledgebase_Class38">
+    <名称 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >西湖醋鱼</名称>
+    <步骤 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >草鱼剖干净，对半切开，葱切小，姜切片；锅里放水大约能将鱼淹没，放入葱和姜片，倒入料酒；把鱼放到水里煮熟捞出；另外用醋、淀粉和水调成料汁；将料汁倒入煮鱼的汤里，直到变浓稠，然后浇到鱼上面即可。</步骤>
+    <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >宋嫂鱼</别名>
+    <别名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >叔嫂传珍</别名>
+    <主料 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >草鱼</主料>
+    <辅料 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >姜、葱段、醋、淀粉、水、盐、料酒</辅料>
+    <简介 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >西湖醋鱼别名为叔嫂传珍，宋嫂鱼，是浙江杭州饭店的一道传统地方风味名菜。</简介>
+  </菜谱>
+  <词 rdf:about="Knowledgebase_Class16">
+    <作者 rdf:resource="Knowledgebase_Class9"/>
+    <简介 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >《江城子·乙卯正月二十日夜记梦》是宋代大文学家苏轼为悼念原配妻子王弗而写的一首悼亡词，表现了绵绵不尽的哀伤和思念。此词情意缠绵，字字血泪。上阙写词人对亡妻的深沉的思念，写实；下阙记述梦境，抒写了词人对亡妻执着不舍的深情，写虚。上阙记实，下阙记梦，虚实结合，衬托出对亡妻的思念，加深全词的悲伤基调。词中采用白描手法，出语如话家常，却字字从肺腑镂出，自然而又深刻，平淡中寄寓着真淳。全词思致委婉，境界层出，情调凄凉哀婉，为脍炙人口的名作。</简介>
+    <原文 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >十年生死两茫茫，不思量，自难忘。千里孤坟，无处话凄凉。纵使相逢应不识，尘满面，鬓如霜。
+夜来幽梦忽还乡，小轩窗，正梳妆。相顾无言，惟有泪千行。料得年年肠断处，明月夜，短松冈。</原文>
+    <名称 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >江城子·乙卯正月二十日夜记梦</名称>
+  </词>
+  <诗 rdf:about="Knowledgebase_Class6">
+    <作者 rdf:resource="Knowledgebase_Class5"/>
+    <原文 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >君不见，黄河之水天上来，奔流到海不复回。
+君不见，高堂明镜悲白发，朝如青丝暮成雪。
+人生得意须尽欢，莫使金樽空对月。
+天生我材必有用，千金散尽还复来。
+烹羊宰牛且为乐，会须一饮三百杯。
+岑夫子，丹丘生，将进酒，杯莫停。
+与君歌一曲，请君为我倾耳听。
+钟鼓馔玉不足贵，但愿长醉不复醒。
+古来圣贤皆寂寞，惟有饮者留其名。
+陈王昔时宴平乐，斗酒十千恣欢谑。
+主人何为言少钱，径须沽取对君酌。
+五花马，千金裘，呼儿将出换美酒，与尔同销万古愁。</原文>
+    <简介 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >《将进酒》原是汉乐府短箫铙歌的曲调，属汉乐府《鼓吹曲·铙歌》旧题。唐代李白沿用乐府古体写的《将进酒》，影响最大。此诗为李白长安放还以后所作，思想内容非常深沉，艺术表现非常成熟。诗由黄河起兴，感情发展也像黄河之水那样奔腾激荡，不易把握。而通篇都讲饮酒，字面上诗人是在宣扬纵酒行乐，而且诗中用欣赏肯定的态度，用豪迈的气势来写饮酒，把它写得很壮美，也确实有某种消极作用，不过反映了诗人当时找不到对抗黑暗势力的有效武器。酒是他个人反抗的兴奋剂，有了酒，像是有了千军万马的力量，但酒，也是他的精神麻醉剂，使他在沉湎中不能做正面的反抗，这些都表现了时代和阶级的局限。理想的破灭是黑暗的社会造成的，诗人无力改变，于是把冲天的激愤之情化做豪放的行乐之举，发泄不满，排遣忧愁，反抗现实。诗中表达了作者对怀才不遇的感叹，又抱着乐观、通达的情怀，也流露了人生几何当及时行乐的消极情绪。全诗洋溢着豪情逸兴，具有出色的艺术成就。</简介>
+    <名称 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >将进酒</名称>
+  </诗>
+  <词 rdf:about="Knowledgebase_Class10">
+    <作者 rdf:resource="Knowledgebase_Class9"/>
+    <名称 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >水调歌头·明月几时有</名称>
+    <简介 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >《水调歌头·明月几时有》是宋代大文学家苏轼公元1076年（宋神宗熙宁九年）中秋在密州时所作。这首词以月起兴，与其弟苏辙七年未见之情为基础，围绕中秋明月展开想象和思考，把人世间的悲欢离合之情纳入对宇宙人生的哲理性追寻之中，反映了作者复杂而又矛盾的思想感情，又表现出作者热爱生活与积极向上的乐观精神。词作上片问天反映执著人生，下片问月表现善处人生。落笔潇洒，舒卷自如，情与景融，境与思偕，思想深刻而境界高逸，充满哲理，是苏轼词的典范之作。</简介>
+    <原文 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >明月几时有，把酒问青天。不知天上宫阙，今夕是何年。我欲乘风归去，又恐琼楼玉宇，高处不胜寒。起舞弄清影，何似在人间？
+转朱阁，低绮户，照无眠。不应有恨，何事长向别时圆？人有悲欢离合，月有阴晴圆缺，此事古难全。但愿人长久，千里共婵娟</原文>
+  </词>
+  <概念 rdf:about="Knowledgebase_Class20">
+    <名称 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >人工神经网络</名称>
+    <简介 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >人工神经网络，是20世纪80 年代以来人工智能领域兴起的研究热点。它从信息处理角度对人脑神经元网络进行抽象， 建立某种简单模型，按不同的连接方式组成不同的网络。在工程与学术界也常直接简称为神经网络或类神经网络。神经网络是一种运算模型，由大量的节点（或称神经元）之间相互联接构成。每个节点代表一种特定的输出函数，称为激励函数。每两个节点间的连接都代表一个对于通过该连接信号的加权值，称之为权重，这相当于人工神经网络的记忆。网络的输出则依网络的连接方式，权重值和激励函数的不同而不同。而网络自身通常都是对自然界某种算法或者函数的逼近，也可能是对一种逻辑策略的表达。</简介>
+  </概念>
+  <电影 rdf:about="Knowledgebase_Class10054">
+    <剧情 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >显平静的生活伴随着富有的单身汉达西（马修·麦克费登饰）和他的好友格莱两个年轻小伙子的到来而泛起了波澜。健康向上的格莱和富家子达西这对要好的朋友在结识了镇上班纳特家的这五朵金花之后，一段美丽而饱含傲慢与偏见的爱情故事就此展开。
+伊丽莎白（凯拉·奈特莉饰）是5个姐妹中最勤勉的一个，她还是个有才智的大学生，在毕业之前她从没有考虑过谈婚论嫁。但是当她遇到英俊潇洒，玩世不恭的格莱和理智的商人达西（马修·麦克费登饰）后，她的判断力开始接受考验。因为富豪子弟达西在短暂的交往后很快便深深地爱上了美丽的伊丽莎白。并且，达西不顾门第和财富的差距，勇敢地向她求婚，但却因为伊丽莎白对他存有的误会和偏见，而遭到了无情的拒绝。伊丽莎白对他存有误会和偏见的原因是，出身富贵的达西经常表现出不可一世的傲慢，这令正直善良的伊丽莎白讨厌不已。因为达西的这种傲慢实际上是地位差异的反映，只要存在这种傲慢，他与伊丽莎白之间就不可能有共同的思想和感情，也不可能有理想的婚姻。但经过了一段时间之后，渐渐地，伊丽莎白发现并亲眼看到了同样善良的达西在为人处世和一系列所作所为上有了质的改变。特别是他过去那种骄傲自负的神态完全不见了踪影，于是伊丽莎白对他的误会和偏见也逐渐消失，一段美满的姻缘也就此最终成就。她的姐妹们也各自得到了想要的甜蜜生活。</剧情>
+    <主演>
+      <演员 rdf:about="Knowledgebase_Class10053">
+        <简介 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >凯拉·奈特莉，1985年3月26日出生于英国密德塞克斯郡，英国女演员。凯拉·奈特莉在孩童时已经开始其演艺事业。2003年在迪士尼电影《加勒比海盗》中担任女主角走红。2005年主演改编自简·奥斯汀小说的同名电影《傲慢与偏见》，并获得第78届奥斯卡金像奖最佳女主角提名。2007年与詹姆斯·麦卡沃伊合作剧情片《赎罪》，获得第65届金球奖最佳女主角提名。2012年与导演乔·怀特三度合作《安娜·卡列尼娜》。2013年主演音乐电影《歌曲改变人生》。2014年参演《模仿游戏》，并获得第87届奥斯卡金像奖最佳女配角提名。2015年参演的《绝命海拔》在中国上映。2017年1月，凯拉·奈特莉《附属美丽》入围金酸莓奖最差女配角奖。</简介>
+        <姓名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >凯拉·奈特莉</姓名>
+        <性别 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >女</性别>
+      </演员>
+    </主演>
+    <简介 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >《傲慢与偏见》是根据简·奥斯汀同名小说改编，由焦点电影公司发行的一部爱情片，由乔·怀特执导，凯拉·奈特利、马修·麦克费登、唐纳德·萨瑟兰等联合主演。该片于2005年9月16日在英国上映。该片讲述了19世纪初期英国的乡绅之女伊丽莎白·班内特五姐妹的爱情与择偶的故事。</简介>
+    <名称 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >傲慢与偏见</名称>
+    <指导>
+      <导演 rdf:about="Knowledgebase_Class10052">
+        <性别 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >男</性别>
+        <简介 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >乔·怀特，于1972年11月17日生于英国伦敦，英国著名导演。他的处女作是改编英国经典名作《傲慢与偏见》，并凭着此部影片在年轻导演中脱颖而出。2007年拍摄爱情大片《赎罪》，影片入围威尼斯电影节正式竞赛单元，乔·怀特因此而成为历史上入围该电影节的最年轻的导演，且在奥斯卡上拿下七项提名 。2008年导演了电影《独奏者》。2012年第三次与凯拉·奈特莉合作，拍摄了电影《安娜·卡列尼娜》。</简介>
+        <姓名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >乔·怀特</姓名>
+      </导演>
+    </指导>
+  </电影>
+  <菜谱 rdf:about="Knowledgebase_Class37">
+    <简介 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >东坡肉又名红烧肉、滚肉、东坡焖肉，是江南地区特色传统名菜。</简介>
+    <步骤 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >锅内烧一锅沸水，将猪肉放入煮10分钟出血沫后捞出放凉，不烫手后将其切成5厘米见方的块状；将生姜去皮洗净后切片、大葱斜切成片、香葱切成段后打结；在沙锅内放入一个小竹架、然后在上面铺上姜片和葱片，再把切好的肉块皮朝下放在葱姜片上；把冰糖、200毫升黄酒、一汤匙老抽倒入锅内，最好撒入少许葱结，盖上锅盖，用桃花纸或锡纸封住沙锅的锅盖边缘，大火煮3分钟烧开后转最小火焖约50分钟，一定是最小最小火哟；之后，关火打开锅盖，把肉翻个面即肉皮朝上，再倒入剩下的200毫升黄酒和老抽，盖上盖、密封边缘，最小火焖半个小时；把焖好的肉装入茶碗别的可盖盖子的陶器亦可，把沙锅内剩余的汤汁一并倒入盛肉的茶碗内，盖上盖子隔水用大火再蒸30分钟即可，盛盘前可撒上少许葱结做装饰。</步骤>
+    <主料 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >带皮五花肉</主料>
+    <名称 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >东坡肉</名称>
+    <辅料 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >绍兴黄酒、老抽、生姜、大葱、香葱、冰糖</辅料>
+  </菜谱>
+  <词 rdf:about="Knowledgebase_Class15">
+    <作者>
+      <作家 rdf:about="Knowledgebase_Class14">
+        <性别 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >女</性别>
+        <姓名 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >李清照</姓名>
+        <简介 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >李清照（1084年3月13日—1155年？），号易安居士，汉族，齐州济南（今山东省济南市章丘区）人。宋代女词人，婉约词派代表，有“千古第一才女”之称。</简介>
+      </作家>
+    </作者>
+    <名称 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >声声慢·寻寻觅觅</名称>
+    <简介 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >《声声慢·寻寻觅觅》是宋代女词人李清照的作品。作品通过描写残秋所见、所闻、所感，抒发自己因国破家亡、天涯沦落而产生的孤寂落寞、悲凉愁苦的心绪，具有浓厚的时代色彩。此词在结构上打破了上下片的局限，一气贯注，着意渲染愁情，如泣如诉，感人至深。开头连下十四个叠字，形象地抒写了作者的心情；下文“点点滴滴”又前后照应，表现了作者孤独寂寞的忧郁情绪和动荡不安的心境。全词一字一泪，风格深沉凝重，哀婉凄苦，极富艺术感染力。</简介>
+    <原文 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >寻寻觅觅，冷冷清清，凄凄惨惨戚戚。乍暖还寒时候，最难将息。三杯两盏淡酒，怎敌他、晚来风急？雁过也，正伤心，却是旧时相识。
+满地黄花堆积。憔悴损，如今有谁堪摘？守着窗儿，独自怎生得黑？梧桐更兼细雨，到黄昏、点点滴滴。这次第，怎一个愁字了得！</原文>
+  </词>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.4, Build 533)  http://protege.stanford.edu -->
